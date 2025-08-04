@@ -18,8 +18,14 @@ This is a responsive microsite built with Vite and React to provide information 
 - Simple success message after form submission
 - Clean, readable code with component-based architecture
 
-## Features
+## What I Would Improve With More Time
 
+- Implement a proper backend for form submission
+- Add more visual elements (icons, illustrations)
+- Improve accessibility with better ARIA attributes
+- Add loading states for better user experience
+
+## Features
 - **Interactive Content Sections**
   - Expandable/collapsible information panels
   - Visual statistics and symptom lists
