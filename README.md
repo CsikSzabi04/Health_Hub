@@ -1,0 +1,39 @@
+# COVID-19 Information Microsite
+
+## Project Overview
+
+This is a responsive microsite built with Vite and React to provide information about COVID-19 in 2025. The site features collapsible content sections, a myth vs. fact table, and a contact form for feedback.
+
+## Implementation Details
+
+- Built with Vite + React for fast development and optimized production builds
+- Responsive design using CSS (no frameworks) that works on mobile and desktop
+- Collapsible content sections that toggle on click
+- Form validation with error messages
+- Simple success message after form submission
+- Clean, readable code with component-based architecture
+
+## Features
+
+- **Interactive Content Sections**
+  - Expandable/collapsible information panels
+  - Visual statistics and symptom lists
+  - Scientific references with direct links
+
+- **Myth vs Fact Comparison**
+  - Side-by-side comparison table
+  - Mobile-friendly responsive design
+  - Highlighted misconceptions
+
+- **User Engagement**
+  - Contact form with validation
+  - Embedded educational video
+  - Responsive design for all devices
+
+## Technologies Used
+
+**Frontend:**
+- React.js (Functional components with Hooks)
+- Tailwind CSS (Styling)
+- Vite (Build tool)
+- React Icons (Optional - if used)
