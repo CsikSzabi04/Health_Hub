@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import ContentSection from './components/ContentSection';
 import MythFactTable from './components/MythFactTable';
 import ContactForm from './components/ContactForm';
@@ -82,20 +83,53 @@ function App() {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-fixed bg-center bg-no-repeat bg-cover bg-[url('https://www.aljazeera.com/wp-content/uploads/2021/03/Doctors-note-wave.png')]">
       <div className="min-h-screen bg-black/40">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <header className="text-center mb-12">
+        <motion.div 
+          className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
+          <motion.header className="text-center mb-12" variants={itemVariants}>
             <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow">
               COVID-19: Amit tudnia kell idén ősszel (2025)
             </h1>
             <p className="text-xl text-white mt-2 drop-shadow">
               Valós tények, közösségi támogatás, megelőzés a jövőért
             </p>
-          </header>
+          </motion.header>
 
-          <section className="mb-12 bg-white bg-opacity-90 rounded-xl shadow-md overflow-hidden backdrop-blur-sm">
+          <motion.section 
+            className="mb-12 bg-white bg-opacity-90 rounded-xl shadow-md overflow-hidden backdrop-blur-sm"
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
             <div className="aspect-w-16 aspect-h-9">
               <video
                 ref={videoRef}
@@ -108,60 +142,85 @@ function App() {
             <div className="p-6">
               <h2 className="text-xl font-semibold text-gray-900">COVID-19 friss információk videó</h2>
             </div>
-          </section>
+          </motion.section>
 
-          <main className="space-y-8">
+          <motion.main className="space-y-8" variants={containerVariants}>
             {contentSections.map((section) => (
-              <ContentSection
+              <motion.div 
                 key={section.id}
-                id={section.id}
-                title={section.title}
-                content={section.content}
-                stats={section.stats}
-                symptoms={section.symptoms}
-                study={section.study}
-                reference={section.reference}
-                image={section.image}
-                advice={section.advice}
-                isActive={activeSection == section.id}
-                toggleSection={toggleSection}
-              />
+                variants={itemVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+              >
+                <ContentSection
+                  id={section.id}
+                  title={section.title}
+                  content={section.content}
+                  stats={section.stats}
+                  symptoms={section.symptoms}
+                  study={section.study}
+                  reference={section.reference}
+                  image={section.image}
+                  advice={section.advice}
+                  isActive={activeSection == section.id}
+                  toggleSection={toggleSection}
+                />
+              </motion.div>
             ))}
 
-            <section className="bg-white bg-opacity-90 rounded-xl shadow-md backdrop-blur-sm p-6" style={{
-              backgroundImage: "url('https://media.istockphoto.com/id/1210712076/fr/vid%C3%A9o/coronavirus-animation-flottante-style-de-dessin-anim%C3%A9-canal-alpha.jpg?s=640x640&k=20&c=LFoP9pfR4NG26woy9ZqFYqs4b8aBnFBbCaygbMEjZio=')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-
-            }}>
+            <motion.section 
+              className="bg-white bg-opacity-90 rounded-xl shadow-md backdrop-blur-sm p-6" 
+              style={{
+                backgroundImage: "url('https://media.istockphoto.com/id/1210712076/fr/vid%C3%A9o/coronavirus-animation-flottante-style-de-dessin-anim%C3%A9-canal-alpha.jpg?s=640x640&k=20&c=LFoP9pfR4NG26woy9ZqFYqs4b8aBnFBbCaygbMEjZio=')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+            >
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 A COVID–19 elleni védőoltásokkal kapcsolatos tények és tévhitek
               </h2>
               <MythFactTable />
-            </section>
+            </motion.section>
 
-            <section className="bg-white bg-opacity-90 rounded-xl shadow-md backdrop-blur-sm p-6 color-white" style={{
-              backgroundImage: "url('https://e1.pxfuel.com/desktop-wallpaper/671/791/desktop-wallpaper-when-the-immune-response-makes-covid-immune-system.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-
-            }}>
+            <motion.section 
+              className="bg-white bg-opacity-90 rounded-xl shadow-md backdrop-blur-sm p-6 color-white" 
+              style={{
+                backgroundImage: "url('https://e1.pxfuel.com/desktop-wallpaper/671/791/desktop-wallpaper-when-the-immune-response-makes-covid-immune-system.jpg')",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+              }}
+              variants={itemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+            >
               <h2 className="text-2xl font-bold text-gray-100 mb-6">Visszajelzés küldése</h2>
               <ContactForm />
-            </section>
-          </main>
+            </motion.section>
+          </motion.main>
 
-          <footer className="mt-16 pt-8 border-t border-blue-100/30 text-center">
+          <motion.footer 
+            className="mt-16 pt-8 border-t border-blue-100/30 text-center"
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+          >
             <p className="text-blue-100 text-base md:text-lg drop-shadow-sm mb-2">
               Kérdezze meg kezelőorvosát vagy gyógyszerészét a legfrissebb védőoltási ajánlásokról
             </p>
             <p className="text-blue-100 text-base md:text-lg drop-shadow-sm">
               Védje meg magát és szeretteit
             </p>
-          </footer>
-        </div>
+          </motion.footer>
+        </motion.div>
       </div>
     </div>
   );

@@ -30,6 +30,7 @@ function ContentSection({
                             <img
                                 src={image}
                                 alt={title}
+                                loading="lazy"
                                 className="w-full h-auto rounded-lg object-cover shadow-sm"
                             />
                         </div>
