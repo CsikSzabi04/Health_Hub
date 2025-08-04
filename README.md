@@ -29,8 +29,7 @@ This is a responsive microsite built with Vite and React to provide information 
   - Side-by-side comparison table
   - Mobile-friendly responsive design
   - Highlighted misconceptions
-<img width="1917" height="778" alt="image" src="https://github.com/user-attachments/assets/fdb214d6-e394-4062-ae79-d0a5bc3e5a3d" />
-
+<img width="1902" height="800" alt="image" src="https://github.com/user-attachments/assets/8eb019d9-f143-4435-bef8-bcb5d718374e" />
 
 - **User Engagement**
   - Contact form with validation
