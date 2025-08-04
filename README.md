@@ -1,7 +1,6 @@
-# COVID-19 Information Microsite
+# COVID-19 Information Microsite - (Kb. 2 órát vett igénybe)
 
 website: [https://covidinfosite.netlify.app/](https://covidinfosite.netlify.app/)
-(Kb. 2 órát vett igénybe)
 
 <img width="1888" height="948" alt="image" src="https://github.com/user-attachments/assets/afd2f2bf-198d-4693-9db4-aaf4a909ece4" />
 
