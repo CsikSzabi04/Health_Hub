@@ -40,6 +40,5 @@ This is a responsive microsite built with Vite and React to provide information 
 - React.js (Functional components with Hooks)
 - Tailwind CSS (Styling)
 - Vite (Build tool)
-- React Icons (Optional - if used)
 
 <img width="1869" height="736" alt="image" src="https://github.com/user-attachments/assets/12878c1d-068b-41f3-97ee-f0d3a0c1c2cc" />
