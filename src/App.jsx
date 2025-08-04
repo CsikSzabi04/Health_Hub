@@ -6,6 +6,7 @@ import vaccineImage from './assets/picture1.jpg';
 import longCovidImage from './assets/picture2.jpg';
 import statsImage from './assets/picture3.jpg';
 import doctorImage from './assets/pic4.jpg';
+import mythImage from './assets/pic5.jpg';
 import videoPlaceholder from './assets/video.mp4';
 
 function App() {
@@ -128,7 +129,13 @@ function App() {
               />
             ))}
 
-            <section className="bg-white bg-opacity-90 rounded-xl shadow-md backdrop-blur-sm p-6">
+            <section className="bg-white bg-opacity-90 rounded-xl shadow-md backdrop-blur-sm p-6" style={{
+              backgroundImage: "url('https://media.istockphoto.com/id/1210712076/fr/vid%C3%A9o/coronavirus-animation-flottante-style-de-dessin-anim%C3%A9-canal-alpha.jpg?s=640x640&k=20&c=LFoP9pfR4NG26woy9ZqFYqs4b8aBnFBbCaygbMEjZio=')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+
+            }}>
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 A COVID–19 elleni védőoltásokkal kapcsolatos tények és tévhitek
               </h2>
