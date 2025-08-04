@@ -6,7 +6,6 @@ import vaccineImage from './assets/picture1.jpg';
 import longCovidImage from './assets/picture2.jpg';
 import statsImage from './assets/picture3.jpg';
 import doctorImage from './assets/pic4.jpg';
-import mythImage from './assets/pic5.jpg';
 import videoPlaceholder from './assets/video.mp4';
 
 function App() {
