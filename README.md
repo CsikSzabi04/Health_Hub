@@ -1,4 +1,4 @@
-# COVID-19 Information Microsite - (Kb. 2 órát vett igénybe)
+# COVID-19 Information Microsite - ##(Kb. 2 órát vett igénybe)
 
 website: [https://covidinfosite.netlify.app/](https://covidinfosite.netlify.app/)
 
